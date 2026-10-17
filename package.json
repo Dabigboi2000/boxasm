@@ -1,0 +1,25 @@
+{
+  "name": "boxasm",
+  "displayName": "BoxASM",
+  "description": "Syntax highlighting for the BB-8 CPUs native assembly",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "boxasm",
+      "aliases": ["Box ASM", "boxasm"],
+      "extensions": [".box",".bx"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "boxasm",
+      "scopeName": "source.boxasm",
+      "path": "./syntaxes/boxasm.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Box ASM",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+			{
+				"name": "comment.block.boxasm",
+				"begin": ";\\*",
+				"end": "\\*;"
+			},
+			{
+				"name": "comment.line.semicolon.boxasm",
+				"match": ";.*$"
+			},
+		  	{
+				"name": "variable.other.boxasm",
+				"match": "(?<=^|\\s)\\$[\\w\\d_-]+(?=\\s|$)"
+			},
+			{
+				"name": "variable.other.boxasm",
+				"match": "(?<=^|\\s)\\*[\\w\\d_\\-\\/\\.\\\\|]+(?=\\s|$)"
+			},
+			{
+				"name": "keyword.control.boxasm",
+				"match": "(?<=^|\\s)\\@[\\w\\d_\\-\\/\\.\\\\|]+(?=\\s|$)"
+			},
+			{
+				"name": "entity.name.function.boxasm",
+				"match": "(?<=^|\\s)\\#[\\w\\d_\\-\\/\\.\\\\|]+(?=\\s|$)"
+			},
+			{
+				"name": "entity.name.function.boxasm",
+				"match": "(?<=^|\\s)\\&[\\w\\d_\\-\\/\\.\\\\|]+(?=\\s|$)"
+			},
+			{
+				"name": "string.quoted.double.boxasm",
+				"match": "\\b(JMR|JMP|WRA|WRB|WRC|LDA|LDB|LDC|LDD|LDE|LDF|LDG|RDA|RDB|RDC|RDD|RDE|RDF|RDG|A>B|A>C|A>D|A>E|A>F|A>G|B>A|B>C|B>D|B>E|B>F|B>G|C>A|C>B|C>D|C>E|C>F|C>G|D>A|D>B|D>C|D>E|D>F|D>G|E>A|E>B|E>C|E>D|E>F|E>G|F>A|F>B|F>C|F>D|F>E|F>G|G>A|G>B|G>C|G>D|G>E|G>F|AA0|BA0|CA0|DA0|EA0|FA0|GA0|AA1|BA1|CA1|DA1|EA1|FA1|GA1|ALA|ALB|ALC|ALD|ALE|ALF|ALG|ADD|SUB|MUL|DIV|TRU|FAL|ZER|CAR|NZE|NCA|GRE|EQU|LES|NEQ|EX0|EX1|EX2|EX3|EX4|EX5|PAA|PAB|PAC|PAD|PAE|PAF|PAG|SHA|SHB|SHC|SHD|SHE|SHF|SHG|PBA|PBB|PBC|PBD|PBE|PBF|PBG|PCA|PCB|PCC|PCD|PCE|PCF|PCG|PDA|PDB|PDC|PDD|PDE|PDF|PDG|HLT|NOP)\\b"
+			}
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.boxasm",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.boxasm",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.boxasm"
+}
