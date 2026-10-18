@@ -1,10 +1,10 @@
-# boxasm README
+# BoxASM VSCode Extention
 
-This is the README for your extension "boxasm". After writing up a brief description, we recommend including the following sections.
+BoxASM is the native assembly language for the [BB-8 CPU][bb-8-git], a homebrew 8 bit processor with a custom architecture and intruction set.
 
 ## Features
 
-Syntax highlighting for BoxASM, the BB-8 CPUs native assembly language. supports functions, comments and comment blocks and literal hexadecimal, decimal and ASCII values.
+Syntax highlighting for BoxASM supports functions, comments and comment blocks and literal hexadecimal, decimal and ASCII values.
 
 ## Known Issues
 
@@ -18,3 +18,4 @@ Added syntax highlighting
 
 Initial release of the BoxASM extentions
 
+[bb-8-git]: https://github.com/Dabigboi2000/BB-8-CPU
